@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ETS">
+    <meta name="description" content="ETS">
+    <meta name="keywords" content="TOEFL">
+    <meta name="robots" content="noindex, nofollow">
+    <script></script>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEUQPUsLMj8NN0U6pMMxi6UGKjUPO0gJLztBtNdQ3P9Lz/gTQ1JAsdRO1v8YT2EbVmcqeZAmcYY0k69Q2v8WSltN0/5EveJT4v9R3f8AFh9Ky/E9qsweXnFP1/82mbcURVMBtGSvAAAA+klEQVR4Aa3RBZLDMAxAUUWJZXaY6f63XLnezqQ41D8QeEEZflOGXywvBH1CqbSxrITwEMqM0XkdCLCs8MFq14iIbSDs+kFcrRm9bsQNsfN+snRR0eheNzNjx+aXB0xarL7dDBs8WNLd9BwbXiWTUs7F3icjITmClDyUc241ybCLR0OZlMrJx5LRaXbv90XeBzO1sXTf6TXvjzUmpBDrtn/LIR5GS8rhaW7P9L5tBB8/zK+L/4d2z1uehoBrdJsLdUZDo59VDmwg1N4GwTod2QWxaHkuaVVEM5r88bE7ICSErBQZPChS/OE2IhC8icI6Mn6IZLDwOYLf9Ado8hG/Et1DBQAAAABJRU5ErkJggg==">
+    <title>Sign in</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: rgba(52,53,121,255);
+        }
+
+
+
+
+
+
+        /* Styling for the input container */
+        .input-container {
+            position: relative;
+            width: 80%;
+            
+        }
+        
+        /* Basic input styling */
+        .input {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            padding-left: 18px;
+
+        } 
+        /* Label styling */
+        .input-label {
+            position: absolute;
+            top: 12px;
+            left: 23px;
+            font-size: 16px;
+            color: #aaa;
+            transition: all 0.3s ease;
+            background-color: white;
+            width: 23%;
+        }
+
+        /* When the input is focused, move the label up */
+        .input:focus + .input-label,
+        .input:valid + .input-label {
+            top: -10px;
+            left: 13px;
+            font-size: 12px;
+            color: #333;
+        }
+        
+        /* Toggle icon styling */
+        .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+
+
+
+
+
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .etss{
+            width: 95px;
+        }
+        .create{
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .create span{
+            font-weight: 700;
+            font-size: 0.7em;
+        }
+        .create:hover{
+            text-decoration: underline;
+        }
+        .head{
+            justify-content: space-between;
+            display: flex;
+            padding-top: 12px;
+            padding-left: 22px;
+            padding-right: 25px;
+        }
+
+        .form{
+            background-color: white;
+            border-color: black solid 5px;
+            color: #555555f6;
+            width: 400px;
+            padding-bottom: 15px;
+            margin-left: 465px;
+            padding-top: 20px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 10px;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+        }
+        .input-box label{
+            position: absolute;
+            top: 13px;
+            left: 63px;
+            transition: 0.3s ease-in-out;
+            color: #aaa;;
+            
+        }
+        .input-box input{
+            width: 80%;
+            height: 50px;
+        }
+        .input-box .input-field{
+            font-size: 1em;
+            color: #555;
+            border: #555 solid 1px;
+            padding-left: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+        .input-box input[type="password"]{
+            margin-bottom: 10px;
+        }
+        .input-box .input-field:focus{
+            outline: 1.5px solid ;
+        }
+        .input-field:focus ~ label, .input-field:valid ~ label{
+            top: -8px;
+            left: 50px;
+            font-size: 12px;
+            background: white;
+            padding: 0 5px;
+            color: #555;
+        }
+
+        input[type="submit"]{
+            background-color: #c9d3ef;
+            width: 80%;
+            height: 55px;
+            border: solid 1px  #c9d3ef ;
+            color: black;
+            font-size: 1em;
+            font-weight: 400;
+        }
+
+        input[type="submit"].active{
+            background-color:rgba(52,53,121,255);
+            cursor: pointer; 
+            border: solid 1px rgba(52,53,121,255) ;
+            color: white;
+            font-size: 1em;
+            font-weight: 400;
+        }
+        input[type="submit"].active:hover{
+            background-color: rgb(6, 6, 61);
+            border: solid 1px rgb(6, 6, 61);
+        }
+        input[type="submit"].active:focus{
+            
+            border: solid 4px rgb(53, 154, 185);
+        }
+
+
+        .forp{
+            color: black;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+        .foru{
+            color: black;
+            margin-top: 7px;
+            font-size: 0.8em;
+            font-weight: 300;
+
+        }
+        .footer{
+            color: white;
+            font-size: 0.95em;
+            margin-top: 10px;
+
+        }
+        .foott{
+            margin-left: 20px;
+            margin-top: 10px;
+            font-size: 0.75em;
+        }
+        .foott div{
+            color: white;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        @media (max-width:1000px){
+            .form{
+                margin-left: 300px;
+            }
+        }
+
+        @media (max-width:720px){
+            .form{
+                margin-left: 175px;
+            }
+        }
+
+        @media (max-width:600px){
+            .form{
+                margin-left: 80px;
+            }
+        }
+
+        @media (max-width:500px){
+            .form{
+                margin-left: 45px;
+            }
+        }
+
+        @media (max-width:470px){
+            .form{
+                margin-left: 30px;
+            }
+        }
+
+        @media (max-width:450px){
+            .form{
+                margin-left: 18px;
+            }
+        }
+        @media (max-width:435px){
+            .form{
+                margin-left: 10px;
+            }
+        }
+        @media (max-width:430px){
+            .form{
+                margin-left: 5px;
+            }
+        }
+        .para{
+            width: 75%;
+            font-size: 0.7em;
+        }
+        .form div h3{
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        
+
+        .input-bo{
+            position: relative;
+            width: 100%;
+            
+            
+        }
+        .input-bo label{
+            position: absolute;
+            top: 13px;
+            left: 63px;
+            transition: 0.25s ease-in-out;
+            color: #555;
+            font-weight: 350;
+        }
+        .input-bo input{
+            width: 80%;
+            height: 50px;
+        }
+        .input-bo .input-field{
+            font-size: 1em;
+            color: #555;
+            border: #555 solid 1px;
+            padding-left: 15px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            outline: none;
+        }
+        .input-bo input[type="password"]{
+            margin-bottom: 10px;
+        }
+        .input-bo .input-field:focus{
+            outline: 1.5px solid ;
+        }
+        .input-field:focus ~ label, .input-field:valid ~ label{
+            top: -8px;
+            left: 50px;
+            font-size: 12px;
+            background: white;
+            padding: 0 5px;
+            color: #555;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header align="center">
+        <div align="center" class="head">
+            <a href="#" class="ets">
+                <img class="etss" src="https://idaas-ui.ets.org/assets/ets-logo-white.svg" alt="ETS"> 
+            </a>
+            <a href="#" class="create">CREATE ACCOUNT <span>/</span> LOG IN</a>
+        </div>
+    </header>
+    <br>
+    <div class="form" align="center">
+        <br>
+        <div class="image">
+            <img src="https://toeflibt.ets.org/images/logo/toefl_brand_black.svg" alt="TOEFL">
+        </div>
+        <br>
+        <div>
+            <H3>Welcome back to TOEFL !</H3>
+        </div>
+        <br>
+        <div align="center" class="para">
+            If you have an existing TOEFL® or GRE® account, sign in <br> using your credentials below
+        </div>
+        <br>
+
+        <form id="loginForm" action="javascript:void(0);" method="POST">
+            <div class="input-box">
+                <input type="text" class="input-field" id="email" required oninput="checkInput()">
+                <label for="email">Username*</label>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" class="input" required oninput="checkInput()">
+                <label for="password" class="input-label">Password*</label>
+                <i id="toggleIcon" class="toggle-icon fas fa-eye" onclick="togglePassword()"></i>
+            </div>
+            <br>
+            <div class="">
+                <input class="sub" type="submit" value="Sign In" id="submitBtn" disabled>
+            </div>
+            <br>
+
+            <a href="#" class="forp">Forgot Password?</a> 
+            <br> 
+            <a href="#" class="foru">Forgot Username?</a>
+
+            <div id="errormessag" style="display: none ; color: red;">Invalid username or password. <br> Please try again.</div>
+        </form>
+    </div>
+    <br>
+    <div class="foott">
+        <div>
+            <a href="#">Legal</a> &nbsp; | &nbsp; 
+            <a href="#">Privacy & Security</a> &nbsp;  | &nbsp; 
+            <a href="#">ETS Trademarks</a>
+        </div>
+        <p class="footer">copyright &copy; 2024 by Educational Testing Service. All rights reserved. <br> All trademarks are the property of their respective owners.</p> 
+    </div>
+    <br>
+    <script>
+        // Predefined valid credentials (could be dynamic if using backend)
+        const validUsername = "Ramiclient00375";
+        const validPassword = "rami00375rk103"; 
+
+        // Check if the input fields are valid
+        function checkInput() {
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('password').value.trim();
+            var submitButton = document.getElementById('submitBtn');
+
+            // Enable submit button if both fields are filled
+            if (email && password) {
+                submitButton.disabled = false;
+                submitButton.classList.add('active');
+            } else {
+                submitButton.disabled = true;
+                submitButton.classList.remove('active');
+            }
+        }
+
+        // Show/hide password
+        function togglePassword() {
+            const password = document.getElementById('password');
+            const icon = document.getElementById('toggleIcon');
+            
+            if (password.type === 'password') {
+                password.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                password.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Handle the form submission (Login check)
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            const username = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Validate the username and password
+            if (username === validUsername && password === validPassword) {
+                // Successful login: redirect to register.test.html
+                window.location.href = "PG2.html"; // Redirect to registration page
+            } else {
+                // Invalid login: show alert or error message
+                error = document.getElementById("errormessag")
+                error.style.display = 'block';
+
+                // Set a timer to hide the element after 9 seconds
+                setTimeout(function() {
+                    error.style.display = 'none';
+                }, 3000);
+                
+            }
+        });
+    </script>
+</body>
+</html>
