@@ -10,6 +10,24 @@
         <meta name="robots" content="noindex, nofollow">
         <script></script>
         <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEUQPUsLMj8NN0U6pMMxi6UGKjUPO0gJLztBtNdQ3P9Lz/gTQ1JAsdRO1v8YT2EbVmcqeZAmcYY0k69Q2v8WSltN0/5EveJT4v9R3f8AFh9Ky/E9qsweXnFP1/82mbcURVMBtGSvAAAA+klEQVR4Aa3RBZLDMAxAUUWJZXaY6f63XLnezqQ41D8QeEEZflOGXywvBH1CqbSxrITwEMqM0XkdCLCs8MFq14iIbSDs+kFcrRm9bsQNsfN+snRR0eheNzNjx+aXB0xarL7dDBs8WNLd9BwbXiWTUs7F3icjITmClDyUc241ybCLR0OZlMrJx5LRaXbv90XeBzO1sXTf6TXvjzUmpBDrtn/LIR5GS8rhaW7P9L5tBB8/zK+L/4d2z1uehoBrdJsLdUZDo59VDmwg1N4GwTod2QWxaHkuaVVEM5r88bE7ICSErBQZPChS/OE2IhC8icI6Mn6IZLDwOYLf9Ado8hG/Et1DBQAAAABJRU5ErkJggg==">
+        <script>
+            // JavaScript to redirect the user after form submission
+            function redirectToPage(event) {
+                event.preventDefault();  // Prevent the form from submitting traditionally
+    
+                // If needed, you can validate the form fields here before redirecting
+                let email = document.getElementById('email').value;
+                let passportNumber = document.getElementById('passport-number').value;
+                let appointmentNumber = document.getElementById('app-number').value;
+    
+                if (email && passportNumber && appointmentNumber) {
+                    // After validation, redirect to PG3.html
+                    window.location.href = "PG3.html";
+                } else {
+                    alert("Please fill all the fields correctly.");
+                }
+            }
+        </script>
         <style>
             body{
                 background-color: rgba(52,53,121,255);
